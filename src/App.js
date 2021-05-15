@@ -15,11 +15,12 @@ function App() {
 
   const showCharacters = () => {return characters.map( 
     character => 
-    <h1> {character.name} 
-    { counter }
+    <div><h1> { character.name } </h1>
+         <img src={ character.image }/>
+    <div>{ counter }</div>
     <button onClick={handleIncrease}> 👍 </button> 
     <button onClick={handleDecrease}> 👎 </button>
-    </h1>
+    </div>
   )
   }
 
