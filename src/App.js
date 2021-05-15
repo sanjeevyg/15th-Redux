@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { GET_CHARACTERS } from './Redux/Types';
 
 
 
@@ -20,7 +21,7 @@ function App() {
     fetch('https://rickandmortyapi.com/api/character/?page=7')
       .then(response => response.json())
       .then(({results}) => dispatch({
-        type: 'GET_CHARACTERS',
+        type: GET_CHARACTERS,
         characters: results
       }))
   }
