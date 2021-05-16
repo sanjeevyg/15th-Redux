@@ -1,4 +1,4 @@
-import { GET_CHARACTERS } from '../Types'
+import { GET_CHARACTERS, INCREASE, DECREASE, DECREASe } from '../Types'
 
 export const get_characters = (pl) => {
     return {
@@ -9,14 +9,14 @@ export const get_characters = (pl) => {
 
 export const increase = (pl) => {
     return {
-        type: 'INCREASE',
-        increase: pl 
+        type: INCREASE,
+        payload: pl 
     }
 }
 
 export const decrease = (pl) => {
     return {
-        type: 'DECREASE',
-        increase: pl 
+        type: DECREASE,
+        payload: pl 
     }
 }
